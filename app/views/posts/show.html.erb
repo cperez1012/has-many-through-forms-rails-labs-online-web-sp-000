@@ -5,7 +5,7 @@
       <%=  c.user.username  %> says: <%=c.content %>
       <% end  %>
 
-      <% @post.users.uniq!.each do |u|  %>
+      <% @post.users.distinct.each do |u|  %>
       <%=link_to u.username, user_path(u)  %>
       <% end  %>
 
