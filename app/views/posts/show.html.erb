@@ -1,5 +1,5 @@
 <h1> User Page </h1>
-<%@user.comments.each do |comment|  %>
-<li><%=comment.content%><li>
-    <%= link_to comment.post.title, post_path(comment.post)  %>
+<%@user.comments.each do |c|  %>
+<li><%=c.content%><li>
+    <%= link_to c.post.title, post_path(c.post)  %>
   <% end  %>
