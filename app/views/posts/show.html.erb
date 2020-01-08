@@ -22,7 +22,7 @@
  <%= f.text_field :content %>
  <%= f.collection_select :user_id, User.all, :id, :username %>
  <%= f.fields_for :user, @user do |username_fields| %>
- <%= username_fields.text_field :username %>
+ <%= username_fields.text_field :username, id: "comment_user_attributes_username" %>
  <% end %>
  <%= f.hidden_field :post_id, value: @post.id %>
  <%= f.submit %>
