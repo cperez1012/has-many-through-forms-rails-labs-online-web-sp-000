@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
   def categories_attributes=(category_attributes_hash)
     category_attributes_hash.values.each do |category_attribute|
       if key_value_pair["name"] != ""
-        category = Category.find_or_create_by(key_value_pair)
+        category = Category.find_or_create_by(category_attribute)
         self.categories << category
       end
     end
